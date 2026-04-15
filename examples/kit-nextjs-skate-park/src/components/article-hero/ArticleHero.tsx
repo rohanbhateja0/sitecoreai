@@ -23,6 +23,30 @@ const hasTextValue = (value?: string): boolean => Boolean(value?.trim());
 
 const hasLinkValue = (field?: LinkField): boolean => Boolean(field?.value?.href);
 
+const formatPublishDate = (value?: string): string | null => {
+  if (!value) {
+    return null;
+  }
+
+  const normalizedValue = value.trim();
+
+  if (!normalizedValue) {
+    return null;
+  }
+
+  const parsedDate = new Date(normalizedValue);
+
+  if (Number.isNaN(parsedDate.getTime())) {
+    return normalizedValue;
+  }
+
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  }).format(parsedDate);
+};
+
 const SocialIcon = ({
   icon,
   ...svgProps
@@ -80,6 +104,9 @@ const ArticleHeroView = ({
   const authors = fields?.Authors;
   const primaryCta = fields?.PrimaryCta;
   const heroImage = fields?.HeroImage;
+  const formattedPublishDate = formatPublishDate(
+    typeof publishDate?.value === 'string' ? publishDate.value : undefined
+  );
   const socialLinks = socialLinkDefinitions(fields);
   const visibleSocialLinks = socialLinks.filter(({ field }) => hasLinkValue(field));
   const editableSocialLinks = socialLinks.filter(({ field }) => Boolean(field));
@@ -123,9 +150,12 @@ const ArticleHeroView = ({
                     isEditing) && (
                     <div className="article-hero__meta">
                       <div className="article-hero__meta-row">
-                        {(publishDate?.value || isEditing) && (
-                          <Text className="article-hero__meta-item" tag="p" field={publishDate} />
-                        )}
+                        {(publishDate?.value || isEditing) &&
+                          (isEditing ? (
+                            <Text className="article-hero__meta-item" tag="p" field={publishDate} />
+                          ) : (
+                            <p className="article-hero__meta-item">{formattedPublishDate}</p>
+                          ))}
                         {(readTime?.value || isEditing) && (
                           <Text className="article-hero__meta-item" tag="p" field={readTime} />
                         )}

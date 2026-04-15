@@ -2,6 +2,8 @@ import React, { JSX } from "react";
 import { Field, ImageField, Page } from "@sitecore-content-sdk/nextjs";
 import Scripts from "src/Scripts";
 import SitecoreStyles from "components/content-sdk/SitecoreStyles";
+import CBREHeader from "components/cbre-header/CBREHeader";
+import CBREFooter from "components/cbre-footer/CBREFooter";
 import { DesignLibraryApp } from "@sitecore-content-sdk/nextjs";
 import { AppPlaceholder } from "@sitecore-content-sdk/nextjs";
 import componentMap from ".sitecore/component-map";
@@ -73,7 +75,8 @@ const Layout = ({ page, baseUrl: baseUrlProp }: LayoutProps): JSX.Element => {
         ) : (
           <>
             <header>
-              <div id="header">
+              <CBREHeader />
+              {/* <div id="header">
                 {route && (
                   <AppPlaceholder
                     page={page}
@@ -82,7 +85,7 @@ const Layout = ({ page, baseUrl: baseUrlProp }: LayoutProps): JSX.Element => {
                     rendering={route}
                   />
                 )}
-              </div>
+              </div> */}
             </header>
             <main>
               <div id="content">
@@ -97,7 +100,8 @@ const Layout = ({ page, baseUrl: baseUrlProp }: LayoutProps): JSX.Element => {
               </div>
             </main>
             <footer>
-              <div id="footer">
+              <CBREFooter />
+              {/* <div id="footer">
                 {route && (
                   <AppPlaceholder
                     page={page}
@@ -106,7 +110,7 @@ const Layout = ({ page, baseUrl: baseUrlProp }: LayoutProps): JSX.Element => {
                     rendering={route}
                   />
                 )}
-              </div>
+              </div> */}
             </footer>
           </>
         )}

@@ -1,0 +1,70 @@
+.cbre-header {
+  @apply bg-[#435254] text-white;
+}
+
+.cbre-header__inner {
+  @apply flex h-20 items-center justify-between px-6 md:px-8 lg:px-14;
+}
+
+.cbre-header__logo,
+.cbre-header__logo:hover {
+  @apply inline-flex items-center text-white no-underline;
+}
+
+.cbre-header__wordmark {
+  @apply block text-font-big font-bold leading-none tracking-[-0.04em];
+  font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.cbre-header__actions {
+  @apply flex items-end gap-4 md:gap-6 lg:gap-[34px];
+}
+
+.cbre-header__nav {
+  @apply hidden lg:block;
+}
+
+.cbre-header__nav-list {
+  @apply m-0 flex list-none items-center gap-8 p-0;
+}
+
+.cbre-header__nav-link,
+.cbre-header__nav-link:hover {
+  @apply text-font-medium font-semibold leading-none text-white no-underline;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.cbre-header__utility {
+  @apply flex items-end gap-4 md:gap-6 lg:gap-[18px];
+}
+
+.cbre-header__icon-button,
+.cbre-header__icon-button:hover {
+  @apply inline-flex h-[20px] w-[28px] items-center justify-center border-0 bg-transparent p-0 text-white no-underline;
+}
+
+.cbre-header__icon-button {
+  cursor: default;
+}
+
+.cbre-header__icon-svg {
+  @apply h-[18px] w-[18px];
+}
+
+.cbre-header__flag-svg {
+  @apply h-5 w-7;
+}
+
+.cbre-header__menu-button {
+  @apply inline-flex lg:hidden;
+}
+
+@media (min-width: 992px) {
+  .cbre-header__utility {
+    @apply gap-[18px];
+  }
+
+  .cbre-header__icon-button {
+    @apply cursor-pointer;
+  }
+}

@@ -1,6 +1,8 @@
 @import './layout.css';
 @import './footer.css';
 @import './header.css';
+@import './cbre-header.css';
+@import './cbre-footer.css';
 @import './promo.css';
 @import './article-hero.css';
 @import './image.css';

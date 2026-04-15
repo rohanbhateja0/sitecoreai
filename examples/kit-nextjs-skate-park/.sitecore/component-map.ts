@@ -17,6 +17,8 @@ import * as Image from 'src/components/image/Image';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
+import * as CBREHeader from 'src/components/cbre-header/CBREHeader';
+import * as CBREFooter from 'src/components/cbre-footer/CBREFooter';
 import * as ArticleHero from 'src/components/article-hero/ArticleHero';
 
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
@@ -36,6 +38,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
+  ['CBREHeader', { ...CBREHeader }],
+  ['CBREFooter', { ...CBREFooter }],
   ['ArticleHero', { ...ArticleHero }],
 ]);
 
