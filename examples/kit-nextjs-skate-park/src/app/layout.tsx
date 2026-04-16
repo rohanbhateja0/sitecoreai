@@ -22,6 +22,8 @@ export default function RootLayout({
           href="https://edge-platform.sitecorecloud.io"
           crossOrigin="anonymous"
         />
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="anonymous" />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>{children}</body>
