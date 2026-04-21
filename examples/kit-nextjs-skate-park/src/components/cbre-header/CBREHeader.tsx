@@ -5,7 +5,7 @@ import type { CBREHeaderNavItem, CBREHeaderProps } from '@/types/cbre-header';
 const DEFAULT_NAV_ITEMS: readonly CBREHeaderNavItem[] = [
   { label: 'Services', href: '#' },
   { label: 'Insight & Research', href: '#' },
-  { label: 'Properties', href: '#' },
+  { label: 'Properties', href: '/property-listings' },
   { label: 'Offices', href: '#' },
   { label: 'Careers', href: '/about' },
   { label: 'About Us', href: '#' },

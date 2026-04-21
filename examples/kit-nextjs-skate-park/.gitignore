@@ -29,3 +29,8 @@
 !.sitecore/import-map.ts
 /coverage
 /.jest-cache
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

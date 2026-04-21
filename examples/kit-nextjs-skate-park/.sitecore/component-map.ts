@@ -8,6 +8,15 @@ import * as Title from 'src/components/title/Title';
 import * as StructuredData from 'src/components/structured-data/StructuredData';
 import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
 import * as RichText from 'src/components/rich-text/RichText';
+import * as types from 'src/components/property-listings/types';
+import * as PropertySearchBox from 'src/components/property-listings/PropertySearchBox';
+import * as PropertyResultsList from 'src/components/property-listings/PropertyResultsList';
+import * as PropertyPagination from 'src/components/property-listings/PropertyPagination';
+import * as PropertyMap from 'src/components/property-listings/PropertyMap';
+import * as PropertyListingsPage from 'src/components/property-listings/PropertyListingsPage';
+import * as PropertyListingsIdentityForm from 'src/components/property-listings/PropertyListingsIdentityForm';
+import * as PropertyListingsEngageTracker from 'src/components/property-listings/PropertyListingsEngageTracker';
+import * as PropertyFilters from 'src/components/property-listings/PropertyFilters';
 import * as Promo from 'src/components/promo/Promo';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as PageContent from 'src/components/page-content/PageContent';
@@ -29,6 +38,15 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['StructuredData', { ...StructuredData }],
   ['RowSplitter', { ...RowSplitter }],
   ['RichText', { ...RichText }],
+  ['types', { ...types }],
+  ['PropertySearchBox', { ...PropertySearchBox, componentType: 'client' }],
+  ['PropertyResultsList', { ...PropertyResultsList, componentType: 'client' }],
+  ['PropertyPagination', { ...PropertyPagination, componentType: 'client' }],
+  ['PropertyMap', { ...PropertyMap, componentType: 'client' }],
+  ['PropertyListingsPage', { ...PropertyListingsPage, componentType: 'client' }],
+  ['PropertyListingsIdentityForm', { ...PropertyListingsIdentityForm, componentType: 'client' }],
+  ['PropertyListingsEngageTracker', { ...PropertyListingsEngageTracker, componentType: 'client' }],
+  ['PropertyFilters', { ...PropertyFilters, componentType: 'client' }],
   ['Promo', { ...Promo }],
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
   ['PageContent', { ...PageContent }],

@@ -1,0 +1,1641 @@
+{
+  "email": "rohan.bhateja@cbre.com",
+  "emails": [
+    "rohan.bhateja@cbre.com"
+  ],
+  "ref": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+  "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+  "createdAt": "2026-04-16T19:38:59.242Z",
+  "modifiedAt": "2026-04-21T19:03:02.966Z",
+  "gender": "unknown",
+  "identifiers": [
+    {
+      "ref": "55b3d588-b840-51d0-8e0c-00ee9e747a98",
+      "createdAt": "2026-04-21T14:52:18.986Z",
+      "modifiedAt": "2026-04-21T14:52:18.986Z",
+      "provider": "email",
+      "id": "rohan.bhateja@cbre.com"
+    }
+  ],
+  "firstSeen": "2026-04-16T19:38:59.242Z",
+  "lastSeen": "2026-04-21T19:03:02.950Z",
+  "guestType": "customer",
+  "language": "EN",
+  "dataExtensions": [],
+  "sessions": [
+    {
+      "ref": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-21T19:03:02.950Z",
+      "modifiedAt": "2026-04-21T19:03:02.976Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+      "status": "OPEN",
+      "sessionType": "WEB",
+      "startedAt": "2026-04-21T19:03:02.923Z",
+      "endedAt": "2026-04-21T19:03:02.950Z",
+      "duration": 0,
+      "pointOfSale": "CBRE",
+      "channel": "WEB",
+      "referer": "http://localhost:3000/",
+      "operatingSystem": "Windows",
+      "userAgent": "Chrome 147",
+      "language": "EN",
+      "firstPageURI": "property listings",
+      "currency": "USD",
+      "dataExtensions": [
+        {
+          "name": "bxt",
+          "key": "bxt",
+          "values": {
+            "geoLocationCity": "Richardson",
+            "geoLocationRegion": "Texas",
+            "geoLocationCountry": "US",
+            "geoLocationContinent": "NA"
+          }
+        }
+      ],
+      "events": [
+        {
+          "ref": "9b529de0-734e-46a6-9741-1a43f5bfa0db",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:19:55.232Z",
+          "modifiedAt": "2026-04-21T19:19:55.248Z",
+          "type": "property_search",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+          "arbitraryData": {
+            "search_mode": "location",
+            "location_label": "Philadelphia, PA, USA",
+            "language": "EN",
+            "filtered_listing_count": 0,
+            "total_source_listings": 57,
+            "center_lat": 39.9525839,
+            "has_bounds": true,
+            "visible_listing_count": 0,
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "center_lng": -75.1652215,
+            "place_id": "ChIJ60u11Ni3xokRwVg-jNgU9Yk"
+          }
+        },
+        {
+          "ref": "3199d963-420b-4688-959f-0e58a36ba5ba",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:17:08.072Z",
+          "modifiedAt": "2026-04-21T19:17:08.086Z",
+          "type": "property_card_clicked",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+          "arbitraryData": {
+            "country": "US",
+            "property_sub_type": "Warehouse",
+            "city": "Philadelphia",
+            "address_label": "3060 S 61st Street, 3060 South 61st Street, Philadelphia, PA, 19153, US",
+            "language": "EN",
+            "transaction_type": "Letting",
+            "property_id": "US-IMDE-157784",
+            "list_index": 1,
+            "click_source": "results_list",
+            "property_type": "Warehouse",
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "region": "PA",
+            "property_title": "282,255 SF of Industrial for Lease in Philadelphia Market",
+            "current_page": 1,
+            "page_size": 6
+          }
+        },
+        {
+          "ref": "302a4177-6894-47a5-9cd0-14e8df435f23",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:17:07.494Z",
+          "modifiedAt": "2026-04-21T19:17:07.505Z",
+          "type": "property_card_clicked",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+          "arbitraryData": {
+            "country": "US",
+            "property_sub_type": "Warehouse",
+            "city": "Philadelphia",
+            "address_label": "3060 S 61st Street, 3060 South 61st Street, Philadelphia, PA, 19153, US",
+            "language": "EN",
+            "transaction_type": "Letting",
+            "property_id": "US-IMDE-157784",
+            "list_index": 1,
+            "click_source": "results_list",
+            "property_type": "Warehouse",
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "region": "PA",
+            "property_title": "282,255 SF of Industrial for Lease in Philadelphia Market",
+            "current_page": 1,
+            "page_size": 6
+          }
+        },
+        {
+          "ref": "854d9623-e2f8-4d89-b6b3-3cab553da7fd",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:17:06.670Z",
+          "modifiedAt": "2026-04-21T19:17:06.681Z",
+          "type": "property_card_clicked",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+          "arbitraryData": {
+            "country": "US",
+            "property_sub_type": "Warehouse",
+            "city": "Philadelphia",
+            "address_label": "3060 S 61st Street, 3060 South 61st Street, Philadelphia, PA, 19153, US",
+            "language": "EN",
+            "transaction_type": "Letting",
+            "property_id": "US-IMDE-157784",
+            "list_index": 1,
+            "click_source": "results_list",
+            "property_type": "Warehouse",
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "region": "PA",
+            "property_title": "282,255 SF of Industrial for Lease in Philadelphia Market",
+            "current_page": 1,
+            "page_size": 6
+          }
+        },
+        {
+          "ref": "d7349860-8fe9-4e0f-82cf-4c7ea5eaa7a4",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:13:56.011Z",
+          "modifiedAt": "2026-04-21T19:13:56.035Z",
+          "type": "property_card_clicked",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+          "arbitraryData": {
+            "country": "US",
+            "property_sub_type": "Warehouse",
+            "city": "Philadelphia",
+            "address_label": "3060 S 61st Street, 3060 South 61st Street, Philadelphia, PA, 19153, US",
+            "language": "EN",
+            "transaction_type": "Letting",
+            "property_id": "US-IMDE-157784",
+            "list_index": 1,
+            "click_source": "results_list",
+            "property_type": "Warehouse",
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "region": "PA",
+            "property_title": "282,255 SF of Industrial for Lease in Philadelphia Market",
+            "current_page": 1,
+            "page_size": 6
+          }
+        },
+        {
+          "ref": "e41c8b86-d261-43d5-a62c-0ba121d5d41e",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:04:46.830Z",
+          "modifiedAt": "2026-04-21T19:04:46.842Z",
+          "type": "property_card_clicked",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+          "arbitraryData": {
+            "country": "US",
+            "property_sub_type": "Warehouse",
+            "city": "Lakeland",
+            "address_label": "Centerstate - Bldg 1, 8565 State Road 33 North, Lakeland, FL, 33809, US",
+            "language": "EN",
+            "transaction_type": "Letting",
+            "property_id": "US-IMDE-125291",
+            "list_index": 0,
+            "click_source": "results_list",
+            "property_type": "Warehouse",
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "region": "FL",
+            "property_title": "480,939 SF Industrial for Lease in Central Florida",
+            "current_page": 1,
+            "page_size": 6
+          }
+        },
+        {
+          "ref": "4f7657b2-e4b6-4989-ab9b-5f8f55df7d74",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:04:44.049Z",
+          "modifiedAt": "2026-04-21T19:04:44.064Z",
+          "type": "property_card_clicked",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+          "arbitraryData": {
+            "country": "US",
+            "property_sub_type": "Warehouse",
+            "city": "Lakeland",
+            "address_label": "Centerstate - Bldg 2, 8565 State Road 33 North, Lakeland, FL, 33809, US",
+            "language": "EN",
+            "transaction_type": "Build To Suit",
+            "property_id": "US-IMDE-125406",
+            "list_index": 2,
+            "click_source": "map_marker",
+            "property_type": "Warehouse",
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "region": "FL",
+            "property_title": "370,110 SF Industrial Build to Suit in Central Florida Market",
+            "current_page": 1,
+            "page_size": 6
+          }
+        },
+        {
+          "ref": "c8fa2bb1-8c33-4f11-9d11-2a2a2a2a2a01",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:04:45.100Z",
+          "modifiedAt": "2026-04-21T19:04:45.112Z",
+          "type": "property_card_clicked",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+          "arbitraryData": {
+            "country": "US",
+            "property_sub_type": "Warehouse",
+            "city": "Lakeland",
+            "address_label": "Centerstate - Bldg 3, 8565 State Road 33 North, Lakeland, FL, 33809, US",
+            "language": "EN",
+            "transaction_type": "Build To Suit",
+            "property_id": "US-IMDE-125407",
+            "list_index": 3,
+            "click_source": "results_list",
+            "property_type": "Warehouse",
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "region": "FL",
+            "property_title": "145,484 SF Industrial Build to Suit in Central Florida Market",
+            "current_page": 1,
+            "page_size": 6
+          }
+        },
+        {
+          "ref": "42954bbd-17e6-4d72-b800-66171ed68b5a",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:04:42.031Z",
+          "modifiedAt": "2026-04-21T19:04:42.119Z",
+          "type": "property_search",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+          "arbitraryData": {
+            "search_mode": "location",
+            "location_label": "Lakeland, FL, USA",
+            "language": "EN",
+            "filtered_listing_count": 0,
+            "total_source_listings": 57,
+            "center_lat": 28.042093,
+            "has_bounds": true,
+            "visible_listing_count": 0,
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "center_lng": -81.9534956,
+            "place_id": "ChIJBwAP37I43YgRCNWiuA8y0Sk"
+          }
+        },
+        {
+          "ref": "2053c327-cffb-4ed2-9411-f027a7d06e84",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:03:10.111Z",
+          "modifiedAt": "2026-04-21T19:03:10.139Z",
+          "type": "property_search",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+          "arbitraryData": {
+            "search_mode": "location",
+            "location_label": "Dallas, TX, USA",
+            "language": "EN",
+            "filtered_listing_count": 0,
+            "total_source_listings": 57,
+            "center_lat": 32.7766642,
+            "has_bounds": true,
+            "visible_listing_count": 0,
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "center_lng": -96.79698789999999,
+            "place_id": "ChIJS5dFe_cZTIYRj2dH9qSb7Lk"
+          }
+        },
+        {
+          "ref": "d9fb3cc2-9d44-5022-ae22-3b3b3b3b3b02",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:03:05.200Z",
+          "modifiedAt": "2026-04-21T19:03:05.212Z",
+          "type": "property_card_clicked",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+          "arbitraryData": {
+            "country": "US",
+            "property_sub_type": "Warehouse",
+            "city": "Sayreville",
+            "address_label": "Arsenal Trade Center - Bldg 1, 49 Callahan Boulevard, Sayreville, NJ, 08872, US",
+            "language": "EN",
+            "transaction_type": "Letting",
+            "property_id": "US-IMDE-125150",
+            "list_index": 2,
+            "click_source": "results_list",
+            "property_type": "Warehouse",
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "region": "NJ",
+            "property_title": "100,501 SF Industrial for Lease in New Jersey Market",
+            "current_page": 1,
+            "page_size": 6
+          }
+        },
+        {
+          "ref": "b6d2a03f-ecb5-4f19-8e74-c3f4fb410cbe",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:03:02.923Z",
+          "modifiedAt": "2026-04-21T19:03:02.979Z",
+          "type": "VIEW",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "89abdaf3-2f0d-4beb-91e6-6737000caa5a",
+          "arbitraryData": {
+            "ext": {
+              "path": "/property-listings"
+            },
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings"
+          }
+        }
+      ]
+    },
+    {
+      "ref": "51c50af5-3a92-58f5-b0df-267e9d9d9d66",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-21T19:01:05.560Z",
+      "modifiedAt": "2026-04-21T19:01:05.560Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "flowExecutionRef": "a41f7aa5-ceec-404f-89ea-447770d06547",
+      "status": "OPEN",
+      "sessionType": "EMAIL",
+      "startedAt": "2026-04-21T19:01:05.560Z",
+      "endedAt": "2026-04-21T19:01:05.560Z",
+      "duration": 0,
+      "channel": "EMAIL",
+      "events": [
+        {
+          "ref": "c35a4285-2d63-44a1-9523-b2c717327363",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T19:01:05.456Z",
+          "modifiedAt": "2026-04-21T19:01:05.574Z",
+          "type": "TRACKING",
+          "status": "PROCESSED",
+          "channel": "EMAIL",
+          "sessionRef": "51c50af5-3a92-58f5-b0df-267e9d9d9d66",
+          "flowExecutionRef": "a41f7aa5-ceec-404f-89ea-447770d06547",
+          "arbitraryData": {
+            "flowExecution": {
+              "ref": "a41f7aa5-ceec-404f-89ea-447770d06547",
+              "occurredAt": 1776798064459,
+              "flowRef": "19b8e0c4-b778-46c0-9898-23caf9d05103",
+              "flowFriendlyId": "trigger_email",
+              "flowVariantRef": "bfeff11c-92d3-498d-91c7-3b2d006234c0",
+              "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+              "causalEventRef": "f0bcb83d-3cba-495c-a413-526c51b8edca",
+              "status": "ERROR",
+              "error": "Failed to send message getting status code 401"
+            },
+            "category": "FAILED"
+          }
+        }
+      ]
+    },
+    {
+      "ref": "f0bcb83d-3cba-495c-a413-526c51b8edca",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-21T18:25:39.435Z",
+      "modifiedAt": "2026-04-21T19:01:04.187Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+      "status": "CLOSED",
+      "sessionType": "WEB",
+      "cartType": "BROWSED",
+      "startedAt": "2026-04-21T18:25:39.408Z",
+      "endedAt": "2026-04-21T18:41:04.158Z",
+      "duration": 15,
+      "pointOfSale": "CBRE",
+      "channel": "WEB",
+      "referer": "http://localhost:3000/",
+      "operatingSystem": "Windows",
+      "userAgent": "Chrome 147",
+      "language": "EN",
+      "firstPageURI": "property listings",
+      "lastPageURI": "property listings",
+      "currency": "USD",
+      "value": 0,
+      "dataExtensions": [
+        {
+          "name": "bxt",
+          "key": "bxt",
+          "values": {
+            "geoLocationCity": "Richardson",
+            "geoLocationRegion": "Texas",
+            "geoLocationCountry": "US",
+            "geoLocationContinent": "NA"
+          }
+        },
+        {
+          "name": "SessionStatistics",
+          "key": "default",
+          "values": {
+            "selects": 0,
+            "searches": 0,
+            "checkouts": 0,
+            "payments": 0,
+            "confirms": 0,
+            "views": 1,
+            "adds": 0
+          }
+        }
+      ],
+      "events": [
+        {
+          "ref": "5ff3661d-b6d2-41be-909d-82109120c14a",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T18:41:04.158Z",
+          "modifiedAt": "2026-04-21T18:41:04.171Z",
+          "type": "property_search",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "f0bcb83d-3cba-495c-a413-526c51b8edca",
+          "arbitraryData": {
+            "search_mode": "location",
+            "location_label": "Indianapolis, IN, USA",
+            "language": "EN",
+            "filtered_listing_count": 0,
+            "total_source_listings": 57,
+            "center_lat": 39.76909,
+            "has_bounds": true,
+            "visible_listing_count": 0,
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "center_lng": -86.158018,
+            "place_id": "ChIJA2p5p_9Qa4gRfOq5QPadjtY"
+          }
+        },
+        {
+          "ref": "c9f4ba52-21e0-4c30-b95e-e1060fd0530c",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T18:40:56.547Z",
+          "modifiedAt": "2026-04-21T18:40:56.563Z",
+          "type": "property_filter_changed",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "f0bcb83d-3cba-495c-a413-526c51b8edca",
+          "arbitraryData": {
+            "total_source_listings": 57,
+            "transaction_types": "all",
+            "property_types": "all",
+            "size_min": 16800,
+            "size_max": 7492320,
+            "visible_listing_count": 56,
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "size_unit": "sqft",
+            "filtered_listing_count": 56
+          }
+        },
+        {
+          "ref": "74372bad-96b0-4dbd-af99-0b6c6b9e3f93",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T18:38:20.240Z",
+          "modifiedAt": "2026-04-21T18:38:20.254Z",
+          "type": "property_filter_changed",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "f0bcb83d-3cba-495c-a413-526c51b8edca",
+          "arbitraryData": {
+            "total_source_listings": 57,
+            "transaction_types": "all",
+            "property_types": "Land",
+            "size_min": 16800,
+            "size_max": 7492320,
+            "visible_listing_count": 15,
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "size_unit": "sqft",
+            "filtered_listing_count": 15
+          }
+        },
+        {
+          "ref": "eaa5c8e6-34a7-4f58-9ab0-0df9b03d632b",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T18:37:54.742Z",
+          "modifiedAt": "2026-04-21T18:37:54.753Z",
+          "type": "property_card_clicked",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "f0bcb83d-3cba-495c-a413-526c51b8edca",
+          "arbitraryData": {
+            "country": "US",
+            "property_sub_type": "Warehouse",
+            "city": "Lakeland",
+            "address_label": "Centerstate - Bldg 3, 8565 State Road 33 North, Lakeland, FL, 33809, US",
+            "language": "EN",
+            "transaction_type": "Build To Suit",
+            "property_id": "US-IMDE-125407",
+            "list_index": 1,
+            "click_source": "results_list",
+            "property_type": "Warehouse",
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "region": "FL",
+            "property_title": "145,484 SF Industrial Build to Suit in Central Florida Market",
+            "current_page": 1,
+            "page_size": 6
+          }
+        },
+        {
+          "ref": "e1c1c90d-cced-4a0f-bcc3-71acc53a7ec6",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T18:37:47.484Z",
+          "modifiedAt": "2026-04-21T18:37:47.502Z",
+          "type": "property_search",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "f0bcb83d-3cba-495c-a413-526c51b8edca",
+          "arbitraryData": {
+            "search_mode": "location",
+            "location_label": "Florida, USA",
+            "language": "EN",
+            "filtered_listing_count": 0,
+            "total_source_listings": 57,
+            "center_lat": 27.6648274,
+            "has_bounds": true,
+            "visible_listing_count": 0,
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "center_lng": -81.5157535,
+            "place_id": "ChIJvypWkWV2wYgR0E7HW9MTLvc"
+          }
+        },
+        {
+          "ref": "a4c5ab42-4aa4-44da-be3c-82782c058fdb",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T18:25:39.408Z",
+          "modifiedAt": "2026-04-21T18:25:39.459Z",
+          "type": "VIEW",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "f0bcb83d-3cba-495c-a413-526c51b8edca",
+          "arbitraryData": {
+            "ext": {
+              "path": "/property-listings"
+            },
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings"
+          }
+        }
+      ]
+    },
+    {
+      "ref": "22490897-0521-5bd6-a44c-796a4d262049",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-21T15:50:50.480Z",
+      "modifiedAt": "2026-04-21T15:50:50.480Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "flowExecutionRef": "365b8248-7bcd-4432-b55a-b88f9fefc46a",
+      "status": "OPEN",
+      "sessionType": "EMAIL",
+      "startedAt": "2026-04-21T15:50:50.480Z",
+      "endedAt": "2026-04-21T15:50:50.480Z",
+      "duration": 0,
+      "channel": "EMAIL",
+      "events": [
+        {
+          "ref": "2065f519-58e3-4683-bfd8-5475f65379f5",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:50:50.463Z",
+          "modifiedAt": "2026-04-21T15:50:50.488Z",
+          "type": "TRACKING",
+          "status": "PROCESSED",
+          "channel": "EMAIL",
+          "sessionRef": "22490897-0521-5bd6-a44c-796a4d262049",
+          "flowExecutionRef": "365b8248-7bcd-4432-b55a-b88f9fefc46a",
+          "arbitraryData": {
+            "flowExecution": {
+              "ref": "365b8248-7bcd-4432-b55a-b88f9fefc46a",
+              "occurredAt": 1776786650026,
+              "flowRef": "19b8e0c4-b778-46c0-9898-23caf9d05103",
+              "flowFriendlyId": "trigger_email",
+              "flowVariantRef": "bfeff11c-92d3-498d-91c7-3b2d006234c0",
+              "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+              "causalEventRef": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+              "status": "ERROR",
+              "error": "Failed to send message getting status code 401"
+            },
+            "category": "FAILED"
+          }
+        }
+      ]
+    },
+    {
+      "ref": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-21T15:12:49.634Z",
+      "modifiedAt": "2026-04-21T15:50:49.177Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+      "status": "CLOSED",
+      "sessionType": "WEB",
+      "cartType": "BROWSED",
+      "startedAt": "2026-04-21T15:12:49.607Z",
+      "endedAt": "2026-04-21T15:30:49.144Z",
+      "duration": 17,
+      "pointOfSale": "CBRE",
+      "channel": "WEB",
+      "referer": "http://localhost:3000/",
+      "operatingSystem": "Windows",
+      "userAgent": "Chrome 147",
+      "language": "EN",
+      "firstPageURI": "property listings",
+      "lastPageURI": "property listings",
+      "currency": "USD",
+      "value": 0,
+      "dataExtensions": [
+        {
+          "name": "bxt",
+          "key": "bxt",
+          "values": {
+            "geoLocationCity": "Richardson",
+            "geoLocationRegion": "Texas",
+            "geoLocationCountry": "US",
+            "geoLocationContinent": "NA"
+          }
+        },
+        {
+          "name": "SessionStatistics",
+          "key": "default",
+          "values": {
+            "selects": 0,
+            "searches": 0,
+            "checkouts": 0,
+            "payments": 0,
+            "confirms": 0,
+            "views": 1,
+            "adds": 0
+          }
+        }
+      ],
+      "contact": {
+        "email": "rohan.bhateja@cbre.com",
+        "emails": [
+          "rohan.bhateja@cbre.com"
+        ],
+        "ref": "cb1435d2-203f-4027-a594-a07137f0f0fa",
+        "identifiers": [
+          {
+            "provider": "email",
+            "id": "rohan.bhateja@cbre.com"
+          }
+        ]
+      },
+      "events": [
+        {
+          "ref": "7d2087ef-df28-4ce5-8749-550419676a2a",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:30:49.144Z",
+          "modifiedAt": "2026-04-21T15:30:49.156Z",
+          "type": "property_sort_changed",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+          "arbitraryData": {
+            "total_source_listings": 56,
+            "sort_from": "relevance",
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "result_count": 8,
+            "sort_to": "size_asc"
+          }
+        },
+        {
+          "ref": "eab23283-db5c-4e23-abb5-e482de5bada6",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:28:21.036Z",
+          "modifiedAt": "2026-04-21T15:28:21.048Z",
+          "type": "property_filter_changed",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+          "arbitraryData": {
+            "total_source_listings": 56,
+            "transaction_types": "all",
+            "property_types": "Land",
+            "size_min": 274400,
+            "size_max": 5283600,
+            "visible_listing_count": 8,
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "size_unit": "sqft",
+            "filtered_listing_count": 8
+          }
+        },
+        {
+          "ref": "e97fbc8a-87bf-407a-b883-209af036d630",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:28:19.479Z",
+          "modifiedAt": "2026-04-21T15:28:19.486Z",
+          "type": "property_filter_changed",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+          "arbitraryData": {
+            "total_source_listings": 56,
+            "transaction_types": "all",
+            "property_types": "Land",
+            "size_min": 274400,
+            "size_max": 6714800,
+            "visible_listing_count": 8,
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "size_unit": "sqft",
+            "filtered_listing_count": 8
+          }
+        },
+        {
+          "ref": "d6fc6876-794f-4d3d-a960-d2c29abc39c7",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:28:17.523Z",
+          "modifiedAt": "2026-04-21T15:28:17.538Z",
+          "type": "property_filter_changed",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+          "arbitraryData": {
+            "total_source_listings": 56,
+            "transaction_types": "all",
+            "property_types": "Land",
+            "size_min": 274400,
+            "size_max": 7492320,
+            "visible_listing_count": 9,
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "size_unit": "sqft",
+            "filtered_listing_count": 9
+          }
+        },
+        {
+          "ref": "1b00aec5-2363-474e-86d7-aafeadd947a2",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:28:13.917Z",
+          "modifiedAt": "2026-04-21T15:28:13.976Z",
+          "type": "property_filter_changed",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+          "arbitraryData": {
+            "total_source_listings": 56,
+            "transaction_types": "all",
+            "property_types": "Land",
+            "size_min": 16800,
+            "size_max": 7492320,
+            "visible_listing_count": 15,
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "size_unit": "sqft",
+            "filtered_listing_count": 15
+          }
+        },
+        {
+          "ref": "6730008d-1d9d-4b57-8554-96714d80e871",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:14:49.082Z",
+          "modifiedAt": "2026-04-21T15:14:49.100Z",
+          "type": "lead_form_submitted",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+          "arbitraryData": {
+            "ext": {
+              "inquiry_category": "PROPERTY_INQUIRY"
+            },
+            "form_id": "property_listings_email_capture",
+            "email_domain": "cbre.com",
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "form_location": "Property Listings"
+          }
+        },
+        {
+          "ref": "6d616eb7-bb1c-497d-8648-6b87df23363c",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:14:48.826Z",
+          "modifiedAt": "2026-04-21T15:14:48.869Z",
+          "type": "IDENTITY",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+          "arbitraryData": {
+            "ext": {
+              "source": "property_listings_email_form"
+            },
+            "identifiers": [
+              {
+                "id": "rohan.bhateja@cbre.com",
+                "provider": "email"
+              }
+            ],
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "email": "rohan.bhateja@cbre.com",
+            "_bx_identity": "Updating Existing CREF: f29c3fc8-ee99-4ebd-823c-86fa0a715446"
+          }
+        },
+        {
+          "ref": "6ce71121-95b9-426f-a1d1-659b7efa3dfc",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:14:40.756Z",
+          "modifiedAt": "2026-04-21T15:14:40.782Z",
+          "type": "lead_form_started",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+          "arbitraryData": {
+            "ext": {
+              "inquiry_category": "PROPERTY_INQUIRY"
+            },
+            "form_id": "property_listings_email_capture",
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "form_location": "Property Listings"
+          }
+        },
+        {
+          "ref": "a930ddf4-2a39-4fab-b29a-3f1993fea861",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:14:39.170Z",
+          "modifiedAt": "2026-04-21T15:14:39.183Z",
+          "type": "property_card_clicked",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+          "arbitraryData": {
+            "country": "US",
+            "property_sub_type": "Warehouse",
+            "city": "Sayreville",
+            "address_label": "Arsenal Trade Center - Bldg 1, 49 Callahan Boulevard, Sayreville, NJ, 08872, US",
+            "language": "EN",
+            "transaction_type": "Letting",
+            "property_id": "US-IMDE-125150",
+            "list_index": 0,
+            "click_source": "results_list",
+            "property_type": "Warehouse",
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "region": "NJ",
+            "property_title": "100,501 SF Industrial for Lease in New Jersey Market",
+            "current_page": 1,
+            "page_size": 6
+          }
+        },
+        {
+          "ref": "e3408bc4-bf69-464c-b24b-e3959e373029",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:13:44.083Z",
+          "modifiedAt": "2026-04-21T15:13:44.097Z",
+          "type": "property_search",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+          "arbitraryData": {
+            "search_mode": "location",
+            "location_label": "Dallas, TX, USA",
+            "language": "EN",
+            "filtered_listing_count": 0,
+            "total_source_listings": 56,
+            "center_lat": 32.7766642,
+            "has_bounds": true,
+            "visible_listing_count": 0,
+            "currency": "USD",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "center_lng": -96.79698789999999,
+            "place_id": "ChIJS5dFe_cZTIYRj2dH9qSb7Lk"
+          }
+        },
+        {
+          "ref": "ff85197f-765e-47ce-a73d-6a6c08b043c4",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:12:49.607Z",
+          "modifiedAt": "2026-04-21T15:12:49.667Z",
+          "type": "VIEW",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "d52e7838-fe78-4fc1-aae2-69adb6602922",
+          "arbitraryData": {
+            "ext": {
+              "path": "/property-listings"
+            },
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings"
+          }
+        }
+      ]
+    },
+    {
+      "ref": "7683aedc-34eb-523e-a12b-4906b70bd09c",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-21T15:12:20.644Z",
+      "modifiedAt": "2026-04-21T15:12:20.644Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "flowExecutionRef": "4f387fee-0715-491c-af4f-9ac2d933cdbc",
+      "status": "OPEN",
+      "sessionType": "EMAIL",
+      "startedAt": "2026-04-21T15:12:20.644Z",
+      "endedAt": "2026-04-21T15:12:20.644Z",
+      "duration": 0,
+      "channel": "EMAIL",
+      "events": [
+        {
+          "ref": "637bb90e-1ff3-40bc-98f0-3b62e77c86db",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T15:12:20.626Z",
+          "modifiedAt": "2026-04-21T15:12:20.658Z",
+          "type": "TRACKING",
+          "status": "PROCESSED",
+          "channel": "EMAIL",
+          "sessionRef": "7683aedc-34eb-523e-a12b-4906b70bd09c",
+          "flowExecutionRef": "4f387fee-0715-491c-af4f-9ac2d933cdbc",
+          "arbitraryData": {
+            "flowExecution": {
+              "ref": "4f387fee-0715-491c-af4f-9ac2d933cdbc",
+              "occurredAt": 1776784339663,
+              "flowRef": "19b8e0c4-b778-46c0-9898-23caf9d05103",
+              "flowFriendlyId": "trigger_email",
+              "flowVariantRef": "bfeff11c-92d3-498d-91c7-3b2d006234c0",
+              "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+              "causalEventRef": "0515b3ee-b7de-4fda-bfb3-17d85eb460c5",
+              "status": "ERROR",
+              "error": "Failed to send message getting status code 401"
+            },
+            "category": "FAILED"
+          }
+        }
+      ]
+    },
+    {
+      "ref": "0515b3ee-b7de-4fda-bfb3-17d85eb460c5",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-21T14:43:16.264Z",
+      "modifiedAt": "2026-04-21T15:12:19.033Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+      "status": "CLOSED",
+      "sessionType": "WEB",
+      "cartType": "BROWSED",
+      "startedAt": "2026-04-21T14:43:16.232Z",
+      "endedAt": "2026-04-21T14:52:18.945Z",
+      "duration": 9,
+      "pointOfSale": "CBRE",
+      "channel": "WEB",
+      "referer": "http://localhost:3000/",
+      "operatingSystem": "Windows",
+      "userAgent": "Chrome 147",
+      "language": "EN",
+      "firstPageURI": "property listings",
+      "lastPageURI": "property listings",
+      "currency": "USD",
+      "value": 0,
+      "dataExtensions": [
+        {
+          "name": "bxt",
+          "key": "bxt",
+          "values": {
+            "geoLocationCity": "Richardson",
+            "geoLocationRegion": "Texas",
+            "geoLocationCountry": "US",
+            "geoLocationContinent": "NA"
+          }
+        },
+        {
+          "name": "SessionStatistics",
+          "key": "default",
+          "values": {
+            "selects": 0,
+            "searches": 0,
+            "checkouts": 0,
+            "payments": 0,
+            "confirms": 0,
+            "views": 2,
+            "adds": 0
+          }
+        }
+      ],
+      "contact": {
+        "email": "rohan.bhateja@cbre.com",
+        "emails": [
+          "rohan.bhateja@cbre.com"
+        ],
+        "ref": "7f6d23f9-23e2-4a15-99b5-380e60a21d8d",
+        "identifiers": [
+          {
+            "provider": "email",
+            "id": "rohan.bhateja@cbre.com"
+          }
+        ]
+      },
+      "events": [
+        {
+          "ref": "c0b9fc09-f571-45fb-bd7e-5e4f5a44fcc2",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T14:52:18.945Z",
+          "modifiedAt": "2026-04-21T14:52:19.010Z",
+          "type": "IDENTITY",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "0515b3ee-b7de-4fda-bfb3-17d85eb460c5",
+          "arbitraryData": {
+            "ext": {
+              "source": "property_listings_email_form"
+            },
+            "identifiers": [
+              {
+                "id": "rohan.bhateja@cbre.com",
+                "provider": "email"
+              }
+            ],
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings",
+            "email": "rohan.bhateja@cbre.com",
+            "_bx_identity": "Unidentified to Identified CREF: f29c3fc8-ee99-4ebd-823c-86fa0a715446"
+          }
+        },
+        {
+          "ref": "64794321-efb9-4452-a9f5-870f01be92fe",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T14:49:54.515Z",
+          "modifiedAt": "2026-04-21T14:49:54.536Z",
+          "type": "VIEW",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "0515b3ee-b7de-4fda-bfb3-17d85eb460c5",
+          "arbitraryData": {
+            "ext": {
+              "path": "/property-listings"
+            },
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings"
+          }
+        },
+        {
+          "ref": "adfce64f-00ea-4dfe-bea8-3278816e6ef5",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-21T14:43:16.232Z",
+          "modifiedAt": "2026-04-21T14:43:16.298Z",
+          "type": "VIEW",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "0515b3ee-b7de-4fda-bfb3-17d85eb460c5",
+          "arbitraryData": {
+            "ext": {
+              "path": "/property-listings"
+            },
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings"
+          }
+        }
+      ]
+    },
+    {
+      "ref": "4d702007-9926-5f3c-8296-93d987f36cdb",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-17T02:22:54.277Z",
+      "modifiedAt": "2026-04-17T02:22:54.277Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "flowExecutionRef": "ded75bdf-ee7d-420c-ab3f-ab37f5f4ce9d",
+      "status": "OPEN",
+      "sessionType": "EMAIL",
+      "startedAt": "2026-04-17T02:22:54.277Z",
+      "endedAt": "2026-04-17T02:22:54.277Z",
+      "duration": 0,
+      "channel": "EMAIL",
+      "events": [
+        {
+          "ref": "6dfbddec-ca42-464b-a898-abd99c7e116e",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-17T02:22:54.256Z",
+          "modifiedAt": "2026-04-17T02:22:54.290Z",
+          "type": "TRACKING",
+          "status": "PROCESSED",
+          "channel": "EMAIL",
+          "sessionRef": "4d702007-9926-5f3c-8296-93d987f36cdb",
+          "flowExecutionRef": "ded75bdf-ee7d-420c-ab3f-ab37f5f4ce9d",
+          "arbitraryData": {
+            "flowExecution": {
+              "ref": "ded75bdf-ee7d-420c-ab3f-ab37f5f4ce9d",
+              "occurredAt": 1776392574248,
+              "flowRef": "19b8e0c4-b778-46c0-9898-23caf9d05103",
+              "flowFriendlyId": "trigger_email",
+              "flowVariantRef": "bfeff11c-92d3-498d-91c7-3b2d006234c0",
+              "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+              "causalEventRef": "1c2a7016-cd80-4cb7-8af2-23500f9c5ff5",
+              "status": "ERROR",
+              "error": "Failed to send message getting status code 401"
+            },
+            "category": "FAILED"
+          }
+        }
+      ]
+    },
+    {
+      "ref": "1c2a7016-cd80-4cb7-8af2-23500f9c5ff5",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-17T02:02:53.394Z",
+      "modifiedAt": "2026-04-17T02:22:53.442Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+      "status": "CLOSED",
+      "sessionType": "WEB",
+      "cartType": "BROWSED",
+      "startedAt": "2026-04-17T02:02:53.355Z",
+      "endedAt": "2026-04-17T02:02:53.394Z",
+      "duration": 0,
+      "pointOfSale": "CBRE",
+      "channel": "WEB",
+      "referer": "http://localhost:3000/",
+      "operatingSystem": "Windows",
+      "userAgent": "Chrome 146",
+      "language": "EN",
+      "firstPageURI": "property listings",
+      "lastPageURI": "property listings",
+      "currency": "USD",
+      "value": 0,
+      "dataExtensions": [
+        {
+          "name": "bxt",
+          "key": "bxt",
+          "values": {
+            "geoLocationCity": "Richardson",
+            "geoLocationRegion": "Texas",
+            "geoLocationCountry": "US",
+            "geoLocationContinent": "NA"
+          }
+        },
+        {
+          "name": "SessionStatistics",
+          "key": "default",
+          "values": {
+            "selects": 0,
+            "searches": 0,
+            "checkouts": 0,
+            "payments": 0,
+            "confirms": 0,
+            "views": 1,
+            "adds": 0
+          }
+        }
+      ],
+      "events": [
+        {
+          "ref": "4bddb8a5-0d7e-49a9-9626-5f92149b864c",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-17T02:02:53.355Z",
+          "modifiedAt": "2026-04-17T02:02:53.418Z",
+          "type": "VIEW",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "1c2a7016-cd80-4cb7-8af2-23500f9c5ff5",
+          "arbitraryData": {
+            "ext": {
+              "path": "/property-listings"
+            },
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings"
+          }
+        }
+      ]
+    },
+    {
+      "ref": "55622028-3319-5a21-a04d-82c297c185ce",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-17T01:32:05.527Z",
+      "modifiedAt": "2026-04-17T01:32:05.527Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "flowExecutionRef": "588a54ce-f43d-4514-b628-59e224990253",
+      "status": "OPEN",
+      "sessionType": "EMAIL",
+      "startedAt": "2026-04-17T01:32:05.527Z",
+      "endedAt": "2026-04-17T01:32:05.527Z",
+      "duration": 0,
+      "channel": "EMAIL",
+      "events": [
+        {
+          "ref": "5d1b113a-dc73-4f44-aadc-2a837efbfcca",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-17T01:32:05.503Z",
+          "modifiedAt": "2026-04-17T01:32:05.533Z",
+          "type": "TRACKING",
+          "status": "PROCESSED",
+          "channel": "EMAIL",
+          "sessionRef": "55622028-3319-5a21-a04d-82c297c185ce",
+          "flowExecutionRef": "588a54ce-f43d-4514-b628-59e224990253",
+          "arbitraryData": {
+            "flowExecution": {
+              "ref": "588a54ce-f43d-4514-b628-59e224990253",
+              "occurredAt": 1776389524922,
+              "flowRef": "19b8e0c4-b778-46c0-9898-23caf9d05103",
+              "flowFriendlyId": "trigger_email",
+              "flowVariantRef": "bfeff11c-92d3-498d-91c7-3b2d006234c0",
+              "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+              "causalEventRef": "cf519b1e-1faf-4e4f-8b82-d7a6473231ab",
+              "status": "ERROR",
+              "error": "Failed to send message getting status code 401"
+            },
+            "category": "FAILED"
+          }
+        }
+      ]
+    },
+    {
+      "ref": "cf519b1e-1faf-4e4f-8b82-d7a6473231ab",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-17T01:11:52.644Z",
+      "modifiedAt": "2026-04-17T01:32:04.176Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+      "status": "CLOSED",
+      "sessionType": "WEB",
+      "cartType": "BROWSED",
+      "startedAt": "2026-04-17T01:11:52.612Z",
+      "endedAt": "2026-04-17T01:12:04.142Z",
+      "duration": 0,
+      "pointOfSale": "CBRE",
+      "channel": "WEB",
+      "referer": "http://localhost:3000/",
+      "operatingSystem": "Windows",
+      "userAgent": "Chrome 146",
+      "language": "EN",
+      "firstPageURI": "property listings",
+      "lastPageURI": "property listings",
+      "currency": "USD",
+      "value": 0,
+      "dataExtensions": [
+        {
+          "name": "bxt",
+          "key": "bxt",
+          "values": {
+            "geoLocationCity": "Richardson",
+            "geoLocationRegion": "Texas",
+            "geoLocationCountry": "US",
+            "geoLocationContinent": "NA"
+          }
+        },
+        {
+          "name": "SessionStatistics",
+          "key": "default",
+          "values": {
+            "selects": 0,
+            "searches": 0,
+            "checkouts": 0,
+            "payments": 0,
+            "confirms": 0,
+            "views": 2,
+            "adds": 0
+          }
+        }
+      ],
+      "events": [
+        {
+          "ref": "a4bab712-14e5-44a4-a882-39e9515d3822",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-17T01:12:04.142Z",
+          "modifiedAt": "2026-04-17T01:12:04.152Z",
+          "type": "VIEW",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "cf519b1e-1faf-4e4f-8b82-d7a6473231ab",
+          "arbitraryData": {
+            "ext": {
+              "path": "/property-listings"
+            },
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings"
+          }
+        },
+        {
+          "ref": "f16eb90e-8e73-4e89-a506-c37e20a2ad2c",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-17T01:11:52.612Z",
+          "modifiedAt": "2026-04-17T01:11:52.669Z",
+          "type": "VIEW",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "cf519b1e-1faf-4e4f-8b82-d7a6473231ab",
+          "arbitraryData": {
+            "ext": {
+              "path": "/property-listings"
+            },
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings"
+          }
+        }
+      ]
+    },
+    {
+      "ref": "841233fc-6773-5e3b-b9bf-03d41b4885e5",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-16T20:03:20.531Z",
+      "modifiedAt": "2026-04-16T20:03:20.531Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "flowExecutionRef": "6b907ec7-e428-4916-b966-c2391a1c0945",
+      "status": "OPEN",
+      "sessionType": "EMAIL",
+      "startedAt": "2026-04-16T20:03:20.531Z",
+      "endedAt": "2026-04-16T20:03:20.531Z",
+      "duration": 0,
+      "channel": "EMAIL",
+      "events": [
+        {
+          "ref": "837c6615-af8b-4020-addf-0938e35be861",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-16T20:03:20.509Z",
+          "modifiedAt": "2026-04-16T20:03:20.545Z",
+          "type": "TRACKING",
+          "status": "PROCESSED",
+          "channel": "EMAIL",
+          "sessionRef": "841233fc-6773-5e3b-b9bf-03d41b4885e5",
+          "flowExecutionRef": "6b907ec7-e428-4916-b966-c2391a1c0945",
+          "arbitraryData": {
+            "flowExecution": {
+              "ref": "6b907ec7-e428-4916-b966-c2391a1c0945",
+              "occurredAt": 1776369799780,
+              "flowRef": "19b8e0c4-b778-46c0-9898-23caf9d05103",
+              "flowFriendlyId": "trigger_email",
+              "flowVariantRef": "bfeff11c-92d3-498d-91c7-3b2d006234c0",
+              "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+              "causalEventRef": "b619f4d1-8f9b-4006-9935-0494df9ca71e",
+              "status": "ERROR",
+              "error": "Failed to send message getting status code 401"
+            },
+            "category": "FAILED"
+          }
+        }
+      ]
+    },
+    {
+      "ref": "b619f4d1-8f9b-4006-9935-0494df9ca71e",
+      "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+      "createdAt": "2026-04-16T19:39:00.361Z",
+      "modifiedAt": "2026-04-16T20:03:18.817Z",
+      "guestRef": "f29c3fc8-ee99-4ebd-823c-86fa0a715446",
+      "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+      "status": "CLOSED",
+      "sessionType": "WEB",
+      "cartType": "BROWSED",
+      "startedAt": "2026-04-16T19:39:00.330Z",
+      "endedAt": "2026-04-16T19:43:18.784Z",
+      "duration": 4,
+      "pointOfSale": "CBRE",
+      "channel": "WEB",
+      "referer": "http://localhost:3000/",
+      "operatingSystem": "Windows",
+      "userAgent": "Chrome 146",
+      "language": "EN",
+      "firstPageURI": "property listings",
+      "lastPageURI": "property listings",
+      "currency": "USD",
+      "value": 0,
+      "dataExtensions": [
+        {
+          "name": "bxt",
+          "key": "bxt",
+          "values": {
+            "geoLocationCity": "Richardson",
+            "geoLocationRegion": "Texas",
+            "geoLocationCountry": "US",
+            "geoLocationContinent": "NA"
+          }
+        },
+        {
+          "name": "SessionStatistics",
+          "key": "default",
+          "values": {
+            "selects": 0,
+            "searches": 0,
+            "checkouts": 0,
+            "payments": 0,
+            "confirms": 0,
+            "views": 3,
+            "adds": 0
+          }
+        }
+      ],
+      "events": [
+        {
+          "ref": "679c4df9-5dbb-49cf-a823-4dc874548aa0",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-16T19:43:18.784Z",
+          "modifiedAt": "2026-04-16T19:43:18.799Z",
+          "type": "VIEW",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "b619f4d1-8f9b-4006-9935-0494df9ca71e",
+          "arbitraryData": {
+            "ext": {
+              "path": "/property-listings"
+            },
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings"
+          }
+        },
+        {
+          "ref": "93204886-1200-4463-be81-e049354e975b",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-16T19:41:39.273Z",
+          "modifiedAt": "2026-04-16T19:41:39.288Z",
+          "type": "VIEW",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "b619f4d1-8f9b-4006-9935-0494df9ca71e",
+          "arbitraryData": {
+            "ext": {
+              "path": "/property-listings"
+            },
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings"
+          }
+        },
+        {
+          "ref": "2d9b328b-bffb-471a-bd07-19ac92cee7b3",
+          "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+          "createdAt": "2026-04-16T19:39:00.330Z",
+          "modifiedAt": "2026-04-16T19:39:00.379Z",
+          "type": "VIEW",
+          "status": "PROCESSED",
+          "channel": "WEB",
+          "pointOfSale": "CBRE",
+          "browserRef": "d35684ce-bfa8-4da2-ac17-811469be528c",
+          "sessionRef": "b619f4d1-8f9b-4006-9935-0494df9ca71e",
+          "arbitraryData": {
+            "ext": {
+              "path": "/property-listings"
+            },
+            "currency": "USD",
+            "language": "EN",
+            "_bx_version": "1.2",
+            "page": "Property Listings"
+          }
+        }
+      ]
+    }
+  ],
+  "orders": [],
+  "segmentMemberships": [],
+  "traits": {
+    "profile": {
+      "channel_preferences": {
+        "value": "WEB",
+        "modifiedAt": "2026-04-21T00:00:00.000Z"
+      },
+      "device_usage": {
+        "value": "Chrome 146",
+        "modifiedAt": "2026-04-21T00:00:00.000Z"
+      }
+    }
+  },
+  "href": "http://boxever-guest-context-service.blue.eu-west-1.production.boxever.com:4321/v2/guestContexts/f29c3fc8-ee99-4ebd-823c-86fa0a715446"
+}
