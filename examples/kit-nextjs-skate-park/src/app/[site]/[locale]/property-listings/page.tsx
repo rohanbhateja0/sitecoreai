@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CBREFooter from "@/components/cbre-footer/CBREFooter";
 import CBREHeader from "@/components/cbre-header/CBREHeader";
+import { PropertyListingsEngageTracker } from "@/components/property-listings/PropertyListingsEngageTracker";
 import { PropertyListingsPage } from "@/components/property-listings/PropertyListingsPage";
 import { getPropertyListings } from "@/lib/property-listings";
 import type { PropertyListingsResponse } from "@/components/property-listings/types";
@@ -65,20 +66,27 @@ export default async function PropertyListingsRoute({ params }: PropertyListings
   try {
     const data = await getPropertyListings();
     return renderPropertyListingsShell(
-      <PropertyListingsPage initialData={data} />,
+      <>
+        <PropertyListingsEngageTracker locale={locale} />
+        <PropertyListingsPage initialData={data} locale={locale} />
+      </>,
       homeHref,
       propertyListingsHref
     );
   } catch (error) {
     return renderPropertyListingsShell(
-      <PropertyListingsPage
-        initialData={EMPTY_PROPERTY_DATA}
-        errorMessage={
-          error instanceof Error
-            ? error.message
-            : "Property listings are temporarily unavailable. Please try again later."
-        }
-      />,
+      <>
+        <PropertyListingsEngageTracker locale={locale} />
+        <PropertyListingsPage
+          locale={locale}
+          initialData={EMPTY_PROPERTY_DATA}
+          errorMessage={
+            error instanceof Error
+              ? error.message
+              : "Property listings are temporarily unavailable. Please try again later."
+          }
+        />
+      </>,
       homeHref,
       propertyListingsHref
     );

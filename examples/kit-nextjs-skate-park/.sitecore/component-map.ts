@@ -14,6 +14,8 @@ import * as PropertyResultsList from 'src/components/property-listings/PropertyR
 import * as PropertyPagination from 'src/components/property-listings/PropertyPagination';
 import * as PropertyMap from 'src/components/property-listings/PropertyMap';
 import * as PropertyListingsPage from 'src/components/property-listings/PropertyListingsPage';
+import * as PropertyListingsIdentityForm from 'src/components/property-listings/PropertyListingsIdentityForm';
+import * as PropertyListingsEngageTracker from 'src/components/property-listings/PropertyListingsEngageTracker';
 import * as PropertyFilters from 'src/components/property-listings/PropertyFilters';
 import * as Promo from 'src/components/promo/Promo';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
@@ -42,6 +44,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['PropertyPagination', { ...PropertyPagination, componentType: 'client' }],
   ['PropertyMap', { ...PropertyMap, componentType: 'client' }],
   ['PropertyListingsPage', { ...PropertyListingsPage, componentType: 'client' }],
+  ['PropertyListingsIdentityForm', { ...PropertyListingsIdentityForm, componentType: 'client' }],
+  ['PropertyListingsEngageTracker', { ...PropertyListingsEngageTracker, componentType: 'client' }],
   ['PropertyFilters', { ...PropertyFilters, componentType: 'client' }],
   ['Promo', { ...Promo }],
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],

@@ -25,6 +25,8 @@ export interface PropertySearchLocation {
 export interface PropertyListingsPageProps {
   initialData: PropertyListingsResponse;
   errorMessage?: string;
+  /** Route locale, used for Engage events (e.g. `en`). */
+  locale?: string;
 }
 
 export interface PropertyMapViewportBounds {

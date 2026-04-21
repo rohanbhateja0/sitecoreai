@@ -8,6 +8,8 @@ import * as PropertyResultsList from 'src/components/property-listings/PropertyR
 import * as PropertyPagination from 'src/components/property-listings/PropertyPagination';
 import * as PropertyMap from 'src/components/property-listings/PropertyMap';
 import * as PropertyListingsPage from 'src/components/property-listings/PropertyListingsPage';
+import * as PropertyListingsIdentityForm from 'src/components/property-listings/PropertyListingsIdentityForm';
+import * as PropertyListingsEngageTracker from 'src/components/property-listings/PropertyListingsEngageTracker';
 import * as PropertyFilters from 'src/components/property-listings/PropertyFilters';
 import * as Navigation from 'src/components/navigation/Navigation';
 
@@ -20,6 +22,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['PropertyPagination', { ...PropertyPagination }],
   ['PropertyMap', { ...PropertyMap }],
   ['PropertyListingsPage', { ...PropertyListingsPage }],
+  ['PropertyListingsIdentityForm', { ...PropertyListingsIdentityForm }],
+  ['PropertyListingsEngageTracker', { ...PropertyListingsEngageTracker }],
   ['PropertyFilters', { ...PropertyFilters }],
   ['Navigation', { ...Navigation }],
 ]);

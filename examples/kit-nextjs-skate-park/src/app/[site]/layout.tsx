@@ -1,5 +1,5 @@
-import { draftMode } from 'next/headers';
-import Bootstrap from 'src/Bootstrap';
+// import { draftMode } from 'next/headers';
+// import Bootstrap from 'src/Bootstrap';
 
 export default async function SiteLayout({
   children,
@@ -8,12 +8,14 @@ export default async function SiteLayout({
   children: React.ReactNode;
   params: Promise<{ site: string }>;
 }) {
-  const { site } = await params;
-  const { isEnabled } = await draftMode();
+  await params;
+  // Temporarily disable Cloud SDK browser bootstrap (see src/Bootstrap.tsx).
+  // const { site } = await params;
+  // const { isEnabled } = await draftMode();
 
   return (
     <>
-      <Bootstrap siteName={site} isPreviewMode={isEnabled} />
+      {/* <Bootstrap siteName={site} isPreviewMode={isEnabled} /> */}
       {children}
     </>
   );

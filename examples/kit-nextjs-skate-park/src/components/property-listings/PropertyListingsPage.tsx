@@ -5,6 +5,7 @@ import { PropertyFilters } from "./PropertyFilters";
 import { PropertyMap } from "./PropertyMap";
 import { PropertyPagination } from "./PropertyPagination";
 import { PropertyResultsList } from "./PropertyResultsList";
+import { PropertyListingsIdentityForm } from "./PropertyListingsIdentityForm";
 import { PropertySearchBox } from "./PropertySearchBox";
 import type {
   PropertyListing,
@@ -89,6 +90,7 @@ function matchesLocation(property: PropertyListing, location: PropertySearchLoca
 export function PropertyListingsPage({
   initialData,
   errorMessage,
+  locale = "en",
 }: PropertyListingsPageProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLocation, setSelectedLocation] = useState<PropertySearchLocation | null>(null);
@@ -193,6 +195,8 @@ export function PropertyListingsPage({
             {errorMessage}
           </div>
         ) : null}
+
+        <PropertyListingsIdentityForm locale={locale} />
 
         <div className="grid gap-8 xl:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
           <section className="min-w-0 space-y-5 xl:sticky xl:top-6 xl:self-start">
