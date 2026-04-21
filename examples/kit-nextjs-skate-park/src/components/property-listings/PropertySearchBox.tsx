@@ -10,16 +10,30 @@ interface SuggestionItem {
   description: string;
 }
 
+export type PropertyTrackedSearchPayload =
+  | {
+      kind: "location";
+      placeId: string;
+      locationLabel: string;
+      centerLat: number;
+      centerLng: number;
+      hasBounds: boolean;
+    }
+  | { kind: "text_query"; query: string };
+
 interface PropertySearchBoxProps {
   value: string;
   onChange: (value: string) => void;
   onLocationSelect: (location: PropertySearchLocation | null) => void;
+  /** Fires after a location is resolved from Places, or when the user submits a text query with Enter. */
+  onPropertySearch?: (payload: PropertyTrackedSearchPayload) => void;
 }
 
 export function PropertySearchBox({
   value,
   onChange,
   onLocationSelect,
+  onPropertySearch,
 }: PropertySearchBoxProps) {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "";
   const { isLoaded } = useGoogleMaps(apiKey);
@@ -108,7 +122,7 @@ export function PropertySearchBox({
       const geometry = results[0].geometry;
       const viewport = geometry.viewport;
 
-      onLocationSelect({
+      const location: PropertySearchLocation = {
         label: suggestion.description,
         center: {
           lat: geometry.location.lat(),
@@ -122,6 +136,17 @@ export function PropertySearchBox({
               west: viewport.getSouthWest().lng(),
             }
           : undefined,
+      };
+
+      onLocationSelect(location);
+
+      onPropertySearch?.({
+        kind: "location",
+        placeId: suggestion.placeId,
+        locationLabel: suggestion.description,
+        centerLat: location.center.lat,
+        centerLng: location.center.lng,
+        hasBounds: Boolean(location.bounds),
       });
     });
   };
@@ -155,6 +180,16 @@ export function PropertySearchBox({
             if (!nextValue.trim()) {
               onLocationSelect(null);
             }
+          }}
+          onKeyDown={(event) => {
+            if (event.key !== "Enter") {
+              return;
+            }
+            const trimmed = value.trim();
+            if (trimmed.length < 2) {
+              return;
+            }
+            onPropertySearch?.({ kind: "text_query", query: trimmed });
           }}
           onFocus={() => setIsFocused(true)}
           placeholder="Search by place, city, postcode, or property"

@@ -1,12 +1,18 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { PropertyFilters } from "./PropertyFilters";
 import { PropertyMap } from "./PropertyMap";
 import { PropertyPagination } from "./PropertyPagination";
 import { PropertyResultsList } from "./PropertyResultsList";
 import { PropertyListingsIdentityForm } from "./PropertyListingsIdentityForm";
-import { PropertySearchBox } from "./PropertySearchBox";
+import { PropertySearchBox, type PropertyTrackedSearchPayload } from "./PropertySearchBox";
+import {
+  trackPropertyCardClicked,
+  trackPropertyFilterChanged,
+  trackPropertySearch,
+  trackPropertySortChanged,
+} from "@/lib/engage/property-listings-engage-events";
 import type {
   PropertyListing,
   PropertyListingsFilters,
@@ -17,6 +23,34 @@ import type {
 
 const PAGE_SIZE = 6;
 const EARTH_RADIUS_KM = 6371;
+
+export type PropertyListingSortOption =
+  | "relevance"
+  | "title_asc"
+  | "title_desc"
+  | "size_asc"
+  | "size_desc";
+
+function sortPropertyListings(
+  list: PropertyListing[],
+  sort: PropertyListingSortOption
+): PropertyListing[] {
+  const copy = [...list];
+  const sizeRank = (p: PropertyListing) => p.minSizeValue ?? p.totalSizeValue ?? 0;
+
+  switch (sort) {
+    case "title_asc":
+      return copy.sort((a, b) => a.addressLabel.localeCompare(b.addressLabel));
+    case "title_desc":
+      return copy.sort((a, b) => b.addressLabel.localeCompare(a.addressLabel));
+    case "size_asc":
+      return copy.sort((a, b) => sizeRank(a) - sizeRank(b));
+    case "size_desc":
+      return copy.sort((a, b) => sizeRank(b) - sizeRank(a));
+    default:
+      return copy;
+  }
+}
 
 function createDefaultFilters(initialData: PropertyListingsPageProps["initialData"]): PropertyListingsFilters {
   return {
@@ -96,10 +130,17 @@ export function PropertyListingsPage({
   const [selectedLocation, setSelectedLocation] = useState<PropertySearchLocation | null>(null);
   const [viewportBounds, setViewportBounds] = useState<PropertyMapViewportBounds | null>(null);
   const [filters, setFilters] = useState(createDefaultFilters(initialData));
+  const [sortBy, setSortBy] = useState<PropertyListingSortOption>("relevance");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedPropertyId, setSelectedPropertyId] = useState<string | null>(
     initialData.listings[0]?.id || null
   );
+
+  const countsRef = useRef({
+    filtered: 0,
+    visible: 0,
+    total: initialData.listings.length,
+  });
 
   const effectiveQuery =
     selectedLocation && searchQuery.trim() === selectedLocation.label ? "" : searchQuery.trim();
@@ -150,12 +191,126 @@ export function PropertyListingsPage({
     );
   }, [filteredProperties, viewportBounds]);
 
-  const totalPages = Math.max(1, Math.ceil(visibleProperties.length / PAGE_SIZE));
+  const sortedVisibleProperties = useMemo(
+    () => sortPropertyListings(visibleProperties, sortBy),
+    [visibleProperties, sortBy]
+  );
+
+  useEffect(() => {
+    countsRef.current = {
+      filtered: filteredProperties.length,
+      visible: sortedVisibleProperties.length,
+      total: initialData.listings.length,
+    };
+  }, [filteredProperties.length, sortedVisibleProperties.length, initialData.listings.length]);
+
+  const totalPages = Math.max(1, Math.ceil(sortedVisibleProperties.length / PAGE_SIZE));
 
   const paginatedProperties = useMemo(() => {
     const startIndex = (currentPage - 1) * PAGE_SIZE;
-    return visibleProperties.slice(startIndex, startIndex + PAGE_SIZE);
-  }, [currentPage, visibleProperties]);
+    return sortedVisibleProperties.slice(startIndex, startIndex + PAGE_SIZE);
+  }, [currentPage, sortedVisibleProperties]);
+
+  const handlePropertySearchTracked = useCallback(
+    (payload: PropertyTrackedSearchPayload) => {
+      window.setTimeout(() => {
+        const { filtered, visible, total } = countsRef.current;
+        if (payload.kind === "location") {
+          void trackPropertySearch(locale, {
+            search_mode: "location",
+            place_id: payload.placeId,
+            location_label: payload.locationLabel,
+            center_lat: payload.centerLat,
+            center_lng: payload.centerLng,
+            has_bounds: payload.hasBounds,
+            filtered_listing_count: filtered,
+            visible_listing_count: visible,
+            total_source_listings: total,
+          });
+        } else {
+          void trackPropertySearch(locale, {
+            search_mode: "text",
+            query: payload.query,
+            filtered_listing_count: filtered,
+            visible_listing_count: visible,
+            total_source_listings: total,
+          });
+        }
+      }, 0);
+    },
+    [locale]
+  );
+
+  const handleSelectProperty = useCallback(
+    (propertyId: string, clickSource: "results_list" | "map_marker") => {
+      const property = filteredProperties.find((p) => p.id === propertyId);
+      if (property) {
+        const listIndex = paginatedProperties.findIndex((p) => p.id === propertyId);
+        void trackPropertyCardClicked(locale, {
+          property_id: property.id,
+          property_title: property.title,
+          property_type: property.propertyType,
+          property_sub_type: property.propertySubType,
+          transaction_type: property.transactionType,
+          city: property.city,
+          region: property.region,
+          country: property.country,
+          address_label: property.addressLabel,
+          click_source: clickSource,
+          list_index: listIndex,
+          current_page: currentPage,
+          page_size: PAGE_SIZE,
+        });
+      }
+      setSelectedPropertyId(propertyId);
+    },
+    [filteredProperties, paginatedProperties, currentPage, locale]
+  );
+
+  const skipFilterEngage = useRef(true);
+  useEffect(() => {
+    if (skipFilterEngage.current) {
+      skipFilterEngage.current = false;
+      return;
+    }
+    const handle = window.setTimeout(() => {
+      const { filtered, visible, total } = countsRef.current;
+      void trackPropertyFilterChanged(locale, {
+        property_types: filters.propertyTypes.length ? filters.propertyTypes.join("|") : "all",
+        transaction_types: filters.transactionTypes.length
+          ? filters.transactionTypes.join("|")
+          : "all",
+        size_min: filters.sizeRange[0],
+        size_max: filters.sizeRange[1],
+        size_unit: initialData.sizeRange.unit,
+        filtered_listing_count: filtered,
+        visible_listing_count: visible,
+        total_source_listings: total,
+      });
+    }, 450);
+    return () => window.clearTimeout(handle);
+  }, [filters, locale, initialData.sizeRange.unit]);
+
+  const sortEngageReady = useRef(false);
+  const prevSort = useRef<PropertyListingSortOption>(sortBy);
+  useEffect(() => {
+    if (!sortEngageReady.current) {
+      sortEngageReady.current = true;
+      prevSort.current = sortBy;
+      return;
+    }
+    if (prevSort.current === sortBy) {
+      return;
+    }
+    const sortFrom = prevSort.current;
+    prevSort.current = sortBy;
+    void trackPropertySortChanged(locale, {
+      sort_from: sortFrom,
+      sort_to: sortBy,
+      result_count: sortedVisibleProperties.length,
+      total_source_listings: initialData.listings.length,
+    });
+  }, [sortBy, sortedVisibleProperties.length, locale, initialData.listings.length]);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -169,10 +324,14 @@ export function PropertyListingsPage({
   }, [currentPage, totalPages]);
 
   useEffect(() => {
-    if (!visibleProperties.some((property) => property.id === selectedPropertyId)) {
-      setSelectedPropertyId(visibleProperties[0]?.id || null);
+    if (!sortedVisibleProperties.some((property) => property.id === selectedPropertyId)) {
+      setSelectedPropertyId(sortedVisibleProperties[0]?.id || null);
     }
-  }, [visibleProperties, selectedPropertyId]);
+  }, [sortedVisibleProperties, selectedPropertyId]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [sortBy]);
 
   return (
     <div className="bg-slate-50">
@@ -204,13 +363,14 @@ export function PropertyListingsPage({
               value={searchQuery}
               onChange={setSearchQuery}
               onLocationSelect={setSelectedLocation}
+              onPropertySearch={handlePropertySearchTracked}
             />
 
             <PropertyMap
               properties={filteredProperties}
               selectedPropertyId={selectedPropertyId}
               focusLocation={selectedLocation}
-              onSelectProperty={setSelectedPropertyId}
+              onSelectProperty={(id) => handleSelectProperty(id, "map_marker")}
               onViewportChange={setViewportBounds}
             />
           </section>
@@ -229,25 +389,37 @@ export function PropertyListingsPage({
               }}
             />
 
-            <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
+            <div className="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
               <div>
                 <p className="text-lg font-semibold text-slate-900">
-                  {visibleProperties.length} properties available
+                  {sortedVisibleProperties.length} properties available
                 </p>
                 <p className="text-sm text-slate-500">
-                  Showing page {visibleProperties.length ? currentPage : 0} of{" "}
-                  {visibleProperties.length ? totalPages : 0}
+                  Showing page {sortedVisibleProperties.length ? currentPage : 0} of{" "}
+                  {sortedVisibleProperties.length ? totalPages : 0}
                 </p>
               </div>
-              {/* <p className="text-sm text-slate-500">
-                Source total: {initialData.total} listing{initialData.total === 1 ? "" : "s"}
-              </p> */}
+              <label className="flex min-w-[200px] flex-col gap-1 text-sm text-slate-700 sm:items-end">
+                <span className="font-medium text-slate-600">Sort</span>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as PropertyListingSortOption)}
+                  className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 sm:w-56"
+                  aria-label="Sort property listings"
+                >
+                  <option value="relevance">Relevance (default)</option>
+                  <option value="title_asc">Address A–Z</option>
+                  <option value="title_desc">Address Z–A</option>
+                  <option value="size_asc">Size (smallest first)</option>
+                  <option value="size_desc">Size (largest first)</option>
+                </select>
+              </label>
             </div>
 
             <PropertyResultsList
               properties={paginatedProperties}
               selectedPropertyId={selectedPropertyId}
-              onSelectProperty={setSelectedPropertyId}
+              onSelectProperty={(id) => handleSelectProperty(id, "results_list")}
             />
 
             <PropertyPagination

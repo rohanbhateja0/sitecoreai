@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { getEngageBrowser } from "@/lib/engage/engage-browser";
+import { trackLeadFormStarted, trackLeadFormSubmitted } from "@/lib/engage/property-listings-engage-events";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -16,6 +17,7 @@ export function PropertyListingsIdentityForm({ locale }: PropertyListingsIdentit
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [message, setMessage] = useState<string | null>(null);
+  const leadStartedTracked = useRef(false);
 
   if (!process.env.NEXT_PUBLIC_CDP_CLIENT_KEY) {
     return null;
@@ -50,9 +52,13 @@ export function PropertyListingsIdentityForm({ locale }: PropertyListingsIdentit
         { source: "property_listings_email_form" }
       );
 
+      const emailDomain = trimmed.includes("@") ? (trimmed.split("@")[1] ?? "").toLowerCase() : "";
+      await trackLeadFormSubmitted(locale, { email_domain: emailDomain });
+
       setStatus("success");
       setMessage("Thanks — your profile has been saved.");
       setEmail("");
+      leadStartedTracked.current = false;
     } catch (err) {
       setStatus("error");
       setMessage(err instanceof Error ? err.message : "Something went wrong. Please try again.");
@@ -74,6 +80,13 @@ export function PropertyListingsIdentityForm({ locale }: PropertyListingsIdentit
             autoComplete="email"
             placeholder="you@company.com"
             value={email}
+            onFocus={() => {
+              if (leadStartedTracked.current) {
+                return;
+              }
+              leadStartedTracked.current = true;
+              void trackLeadFormStarted(locale);
+            }}
             onChange={(ev) => setEmail(ev.target.value)}
             disabled={status === "submitting"}
             className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-900 outline-none ring-emerald-600 focus:border-emerald-600 focus:ring-2 disabled:bg-slate-50"
